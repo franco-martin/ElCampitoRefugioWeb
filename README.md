@@ -160,6 +160,17 @@ El administrador podrá, a través de un panel de administración, incorporar di
 - [ ] Al menos tener 5 rutas del backend con sus tests respectivos
 - [ ] Al menos tener 5 modelos de la base de datos con sus tests respectivos
 
+# Entorno local
+## API
+Para abstraer las versiones de nodejs y compatibilidades del sistema operativo, se implemento un proceso de build que usa docker. Los comandos `npm run docker-build` y `npm run docker-run` construyen y lanzan la una imagen con todas las dependencias necesarias para el funcionamiento de la aplicacion.
+### Requerimientos
+- Tener el archivo .env completo dentro de la carpeta `/api`
+- docker instalado
+### Procedimiento
+- En una terminal, cambiar al directorio `/api`
+- Ejecutar el comando `npm run docker-build` que creara una imagen de docker llamada `api`
+- Ejecutar el comando `npm run docker-run` que lanzara la imagen creada anteriormente y montara el archivo `.env` en el directorio apropiado.
+
 # Equipo de Desarrollo: 
 
 ...
